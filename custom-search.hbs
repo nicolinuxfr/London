@@ -12,6 +12,13 @@
     	<div id="search-result"></div>
 	</div>
 
+	<form>
+    	<input id="search-field" />
+	    <input type="submit" value="search">
+	</form>
+	
+	<section id="results"></section>
+
 </article>
 {{/post}}
 
@@ -24,4 +31,9 @@
     	contentApiKey: '65cb2b1d009a6e0f7b44a171bb'
 	})
 </script>
+<script>
+    $("#search-field").ghostHunter({
+      results: "#results"
+    });
+  </script>
 {{/contentFor}}
