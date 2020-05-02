@@ -1,0 +1,27 @@
+{{!< default}}
+
+{{#post}}
+<article class="post-content {{post_class}} {{#unless feature_image}}no-image{{/unless}}">
+
+    <header class="post-content-header">
+        <h1 class="post-content-title">{{title}}</h1>
+    </header>
+
+   <div>
+    	<input id="search-input" type="text" placeholder="Type to search" />
+    	<div id="search-result"></div>
+	</div>
+
+</article>
+{{/post}}
+
+{{!-- The #contentFor helper here will send everything inside it up to the matching #block helper found in default.hbs --}}
+{{#contentFor "scripts"}}
+<script>
+   new GhostFinder({
+    	input: '#search-input',
+    	showResult: '#search-result',
+    	contentApiKey: '65cb2b1d009a6e0f7b44a171bb'
+	})
+</script>
+{{/contentFor}}
