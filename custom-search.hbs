@@ -28,12 +28,13 @@
    new GhostFinder({
     	input: '#search-input',
     	showResult: '#search-result',
-    	contentApiKey: '65cb2b1d009a6e0f7b44a171bb'
+    	contentApiKey: ''
 	})
 </script>
 <script>
+	var ghosthunter_key = '65cb2b1d009a6e0f7b44a171bb';
     $("#search-field").ghostHunter({
-      results: "#results"
+    	results: "#results"
     });
   </script>
 {{/contentFor}}
