@@ -5,15 +5,11 @@ into the {body} of the default.hbs template --}}
 {{#tag}}
 <header class="page-head">
     <h1 class="page-head-title">{{name}}</h1>
-    <p class="page-head-description">
-        {{#if description}}
-            {{description}}
-        {{else}}
-            A collection of {{plural ../pagination.total empty='posts' singular='% post' plural='% posts'}}
-        {{/if}}
-    </p>
 </header>
 {{/tag}}
+
+
+{{#get "posts" limit="all" order="title asc" }}
 
 <div class="post-feed">
 {{#foreach posts}}
@@ -23,3 +19,6 @@ into the {body} of the default.hbs template --}}
 
 {{/foreach}}
 </div>
+
+{{/get}}
+
