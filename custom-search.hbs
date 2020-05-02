@@ -8,8 +8,8 @@
     </header>
 
    <div>
-    	<input id="ghost-search-field" type="text" placeholder="Type to search" />
-    	<div id="ghost-search-results"></div>
+    	<input id="search-bar" type="text" placeholder="Type to search" />
+    	<div id="search-results"></div>
 	</div>
 
 </article>
@@ -32,7 +32,7 @@
             resource: 'posts',
             parameters: { 
                 fields: ['title', 'slug', 'plaintext',],
-                formats: 'plaintext',
+                formats: 'plaintext'
             },
             resource: 'tags',
             	parameters: { 
@@ -40,5 +40,9 @@
             	},
         }
     })
+    
+	var searchinGhost = new SearchinGhost({
+		key: '65cb2b1d009a6e0f7b44a171bb'
+	});
 </script>
 {{/contentFor}}
