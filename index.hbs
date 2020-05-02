@@ -10,7 +10,7 @@ into the {body} of the default.hbs template --}}
     {{/if}}
 {{/is}}
 
-{{#get "posts" order="title asc"}}
+{{#get "posts" limit="all" filter="-base" order="title asc" }}
 
 <div class="post-feed">
     {{#foreach posts}}
