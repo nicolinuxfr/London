@@ -11,6 +11,9 @@
     	<input id="search-input" type="text" placeholder="Type to search" />
     	<div id="search-result"></div>
 	</div>
+	
+	<input id="ghost-search-field">
+	<div id="ghost-search-results"></div>
 
 </article>
 {{/post}}
@@ -23,5 +26,10 @@
     	showResult: '#search-result',
     	contentApiKey: '65cb2b1d009a6e0f7b44a171bb'
 	})
+	
+	let ghostSearch = new GhostSearch({
+		key: 'b38f2becb70bf4a7f3869d5bf2', // This is just a demo key. Replace the key with a real one. See Step 3.
+		url: 'http://raspberry.local:2368', // This is just a demo host. Replace the demo url with a real one. See Step 3.
+    })
 </script>
 {{/contentFor}}
