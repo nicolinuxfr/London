@@ -6,10 +6,10 @@ into the {body} of the default.hbs template --}}
 <header class="page-head">
     <h1 class="page-head-title">{{name}}</h1>
 </header>
+{{/tag}}
 
 
-
-{{#get "posts" limit="all" filter="tag:{{name}}" order="title asc" }}
+{{#get "posts" limit="all" filter="tags.slug:{{tag.slug}}" order="title asc" }}
 
 <div class="post-feed">
 {{#foreach posts}}
@@ -22,4 +22,3 @@ into the {body} of the default.hbs template --}}
 
 {{/get}}
 
-{{/tag}}
