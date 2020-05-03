@@ -19,7 +19,21 @@
 {{#contentFor "scripts"}}
 <script>
 	var searchinGhost = new SearchinGhost({
-		key: '65cb2b1d009a6e0f7b44a171bb'
+		key: '65cb2b1d009a6e0f7b44a171bb',
+        postsFields: ['title', 'url', 'excerpt'],
+        postsExtraFields: ['tags'],
+        outputChildsType: 'h3',
+        indexedFields: ['title', 'string_tags', 'plaintext', 'url'],
+        template: function(post) {
+            return `<a href="${post.url}">${post.title}</a>`
+        },
+        customProcessing: function(post) {
+            if (post.tags) post.string_tags = post.tags.map(o => o.name).join(' ').toLowerCase();
+                return post;
+        },
+        emptyTemplate: function() {
+            return '<p>Pas de résultat… 😢</p>'
+        }
 	});
 </script>
 {{/contentFor}}
