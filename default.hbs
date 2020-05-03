@@ -98,5 +98,16 @@
         {{ghost_foot}}
     </div>
 
+    {{!-- Handle swup content replacement --}}
+    <script data-swup-ignore-script>
+        $(document).ready(function () {
+            // Mobile Menu Trigger
+            $('.nav-burger').click(function () {
+                $('body').toggleClass('site-head-open');
+            });
+        });
+    </script>
+
+
 </body>
 </html>
