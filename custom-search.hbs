@@ -18,29 +18,6 @@
 {{!-- The #contentFor helper here will send everything inside it up to the matching #block helper found in default.hbs --}}
 {{#contentFor "scripts"}}
 <script>
-	let ghostSearch = new GhostSearch({
-		key: 'b38f2becb70bf4a7f3869d5bf2',
-		url: 'http://raspberry.local:2368',
-		options: {
-            keys: [
-                'title',
-                'plaintext',
-                'name'
-            ],
-        },
-        api: {
-            resource: 'posts',
-            parameters: { 
-                fields: ['title', 'slug', 'plaintext',],
-                formats: 'plaintext'
-            },
-            resource: 'tags',
-            	parameters: { 
-                	fields: ['name', 'slug'],
-            	},
-        }
-    })
-    
 	var searchinGhost = new SearchinGhost({
 		key: '65cb2b1d009a6e0f7b44a171bb'
 	});
